@@ -11,13 +11,7 @@
     <div class="row">
         <div class="col-5 bg-light p-5 ml-auto">
             <h2 class="pb-4">Register here!</h2>
-            {% with success = get_flashed_messages(with_categories=True, category_filter=['regSuccess']) %}
-            {% if success %}
-            <div class="alert small alert-success">
-                <strong>Success!</strong> You're registered!
-            </div>
-            {% endif %}
-            {% endwith %}
+
             <form action='/reg_validate' method="POST">
                         <div class="form-group">
                             <label for="first_name">First name:</label>
