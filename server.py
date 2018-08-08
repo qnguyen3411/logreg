@@ -62,7 +62,8 @@ def regValidate():
             insertQuery = "INSERT INTO users (first_name, last_name, email, password) VALUES(%(first_name)s, %(last_name)s, %(email)s, %(password_hash)s);"
             userid = mysql.query_db(insertQuery,data)
             session['id'] = userid
-    return redirect('/wall')
+            return redirect('/wall')
+    return redirect('/')
 
 @app.route('/log_validate', methods=['POST'])
 def logValidate():
